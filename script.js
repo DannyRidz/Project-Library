@@ -41,6 +41,22 @@ function displayBooks() {
             displayBooks();
         });
 
+        const toggleReadButton = document.createElement('button');
+        toggleReadButton.textContent = book.read ? "Mark Not Read" : "Mark Read";
+        toggleReadButton.dataset.id = book.id;
+
+        toggleReadButton.addEventListener('click', function () {
+            const bookId = toggleReadButton.dataset.id;
+            const bookToToggle = myLibrary.find(function (book) {
+                return book.id === bookId;
+            });
+
+            bookToToggle.toggleRead();
+            displayBooks();
+        });
+
+        bookCard.appendChild(toggleReadButton);
+
         bookCard.appendChild(removeButton);
 
         library.appendChild(bookCard);
