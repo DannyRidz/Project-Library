@@ -26,3 +26,8 @@ function displayBooks() {
         library.appendChild(bookCard);
     }
 }
+
+addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, false);
+addBookToLibrary("Atomic Habits", "James Clear", 320, true);
+
+displayBooks();
