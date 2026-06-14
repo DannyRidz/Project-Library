@@ -34,6 +34,12 @@ displayBooks();
 
 const bookForm = document.querySelector('#book-form');
 
+const newBookButton = document.querySelector('#new-book-button');
+
+newBookButton.addEventListener("click", function () {
+    bookForm.style.display = "block";
+});
+
 bookForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
