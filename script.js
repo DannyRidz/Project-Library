@@ -27,6 +27,16 @@ function displayBooks() {
         removeButton.textContent = "Remove";
         removeButton.dataset.id = book.id;
 
+        removeButton.addEventListener('click', function () {
+            const bookId = removeButton.dataset.id;
+            const bookIndex = myLibrary.findIndex(function (book) {
+                return book.id === bookId;
+            });
+
+            myLibrary.splice(bookIndex, 1);
+            displayBooks();
+        });
+
         bookCard.appendChild(removeButton);
 
         library.appendChild(bookCard);
