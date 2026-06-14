@@ -31,3 +31,19 @@ addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, false);
 addBookToLibrary("Atomic Habits", "James Clear", 320, true);
 
 displayBooks();
+
+const bookForm = document.querySelector('#book-form');
+
+bookForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const title = document.querySelector('#title').value;
+    const author = document.querySelector('#author').value;
+    const pages = document.querySelector('#pages').value;
+    const read = document.querySelector('#read').checked;
+
+    addBookToLibrary(title, author, pages, read);
+    displayBooks();
+
+    bookForm.reset();
+});
