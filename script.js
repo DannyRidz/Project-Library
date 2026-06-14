@@ -52,4 +52,5 @@ bookForm.addEventListener("submit", function (event) {
     displayBooks();
 
     bookForm.reset();
+    bookForm.style.display = "none";
 });
