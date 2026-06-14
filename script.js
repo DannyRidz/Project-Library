@@ -23,6 +23,12 @@ function displayBooks() {
 
         bookCard.textContent = `${book.title} by ${book.author}, ${book.pages} pages, ${book.read ? "read" : "not read yet"}`;
 
+        const removeButton = document.createElement('button');
+        removeButton.textContent = "Remove";
+        removeButton.dataset.id = book.id;
+
+        bookCard.appendChild(removeButton);
+
         library.appendChild(bookCard);
     }
 }
