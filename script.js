@@ -63,9 +63,6 @@ function displayBooks() {
     }
 }
 
-addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, false);
-addBookToLibrary("Atomic Habits", "James Clear", 320, true);
-
 displayBooks();
 
 const bookForm = document.querySelector('#book-form');
