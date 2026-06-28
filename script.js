@@ -67,8 +67,6 @@ function displayBooks() {
 
 displayBooks();
 
-const bookForm = document.querySelector("#book-form");
-
 const newBookButton = document.querySelector("#new-book-button");
 
 newBookButton.addEventListener("click", function () {
