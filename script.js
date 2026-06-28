@@ -119,7 +119,7 @@ function showErrors() {
     authorError.textContent = "Please provide an author name.";
     authorError.classList.add("active");
   } else if (authorInput.validity.tooShort) {
-    authorError.textContent = "Please provide an author name.";
+    authorError.textContent = `Author name must be at least ${authorInput.minLength} characters. You only typed ${authorInput.value.length}.`;
     authorError.classList.add("active");
   } else {
     authorError.textContent = "";
