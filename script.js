@@ -77,7 +77,7 @@ const bookForm = document.querySelector("#book-form");
 const titleInput = document.querySelector("#title");
 const authorInput = document.querySelector("#author");
 const pagesInput = document.querySelector("#pages");
-const newBookButton = document.querySelector("#new-book-button");
+// const newBookButton = document.querySelector("#new-book-button");
 
 bookForm.addEventListener("submit", function (event) {
   event.preventDefault();
