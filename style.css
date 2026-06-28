@@ -34,5 +34,5 @@
 
 .form-control input:focus:invalid {
   border-color: #ef4444;
-  outline-border: #ef4444;
+  outline-color: #ef4444;
 }
