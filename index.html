@@ -1,38 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h1>My Library</h1>
 
     <button id="new-book-button">New Book</button>
 
-    <form id="book-form">
+    <form id="book-form" novalidate>
+      <div class="form-control">
         <label for="title">Title</label>
-        <input type="text" id="title" name="title">
+        <input type="text" id="title" name="title" required />
+        <span class="error-msg" aria-live="polite"></span>
+      </div>
 
+      <div class="form-control">
         <label for="author">Author</label>
-        <input type="text" id="author" name="author">
+        <input type="text" id="author" name="author" required minlength="3" />
+        <span class="error-msg" aria-live="polite"></span>
+      </div>
 
+      <div class="form-control">
         <label for="pages">Pages</label>
-        <input type="number" id="pages" name="pages">
+        <input type="number" id="pages" name="pages" required min="1" />
+        <span class="error-msg" aria-live="polite"></span>
+      </div>
 
+      <div class="form-control">
         <label for="read">Read?</label>
-        <input type="checkbox" id="read" name="read">
+        <input type="checkbox" id="read" name="read" />
+      </div>
 
-        <button type="submit">Add Book</button>
+      <button type="submit">Add Book</button>
     </form>
 
     <div id="library"></div>
-
-</body>
-
+  </body>
 </html>
